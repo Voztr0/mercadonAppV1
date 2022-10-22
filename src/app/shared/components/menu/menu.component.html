@@ -5,9 +5,16 @@
     (click)="goToHome()"
   />
   <span class="example-spacer"></span>
-  <mat-icon>logout</mat-icon>
+  <mat-icon class="button" (click)="logOut()" *ngIf="isLogged()"
+    >logout</mat-icon
+  >
   <div>
-    <button (click)="goToLogin()" mat-stroked-button color="primary">
+    <button
+      *ngIf="!isLogged()"
+      (click)="goToLogin()"
+      mat-stroked-button
+      color="primary"
+    >
       Iniciar sesión
     </button>
   </div>
