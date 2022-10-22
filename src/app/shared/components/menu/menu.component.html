@@ -1,1 +1,14 @@
-<p>menu works!</p>
+<mat-toolbar>
+  <img
+    class="logoHeader"
+    src="../../../../assets/img/logo_header.png"
+    (click)="goToHome()"
+  />
+  <span class="example-spacer"></span>
+  <mat-icon>logout</mat-icon>
+  <div>
+    <button (click)="goToLogin()" mat-stroked-button color="primary">
+      Iniciar sesión
+    </button>
+  </div>
+</mat-toolbar>
