@@ -12,6 +12,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MenuComponent } from './components/menu/menu.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [SpinnerComponent, MenuComponent],
@@ -25,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatSnackBarModule,
     MatToolbarModule,
     MatIconModule,
+    MatCardModule,
   ],
   exports: [
     SpinnerComponent,
@@ -35,6 +37,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatSnackBarModule,
     MenuComponent,
     MatIconModule,
+    MatCardModule,
   ],
 })
 export class SharedModule {}
