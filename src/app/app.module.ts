@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SharedModule } from './shared/shared.module';
 import { ProductsComponent } from './components/products/products.component';
 import { HomeComponent } from './components/home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,

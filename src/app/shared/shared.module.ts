@@ -14,6 +14,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [SpinnerComponent, MenuComponent],
@@ -29,6 +32,9 @@ import { MatTableModule } from '@angular/material/table';
     MatIconModule,
     MatCardModule,
     MatTableModule,
+    MatTooltipModule,
+    MatSortModule,
+    MatPaginatorModule,
   ],
   exports: [
     SpinnerComponent,
@@ -41,6 +47,9 @@ import { MatTableModule } from '@angular/material/table';
     MatIconModule,
     MatCardModule,
     MatTableModule,
+    MatTooltipModule,
+    MatSortModule,
+    MatPaginatorModule,
   ],
 })
 export class SharedModule {}
