@@ -12,10 +12,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 // Componentes
 import { LoginComponent } from './components/login/login.component';
-
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [AppComponent, LoginComponent],
   imports: [
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

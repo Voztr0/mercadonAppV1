@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
   public form: FormGroup;
-
+  public loading: boolean = false;
   constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) {
     this.form = this.fb.group({
       user: ['', Validators.required],
@@ -23,10 +23,11 @@ export class LoginComponent implements OnInit {
     const user = this.form.value.user;
     const pass = this.form.value.password;
     if (user == 'admin' && pass == 'admin') {
-      //redirect to dashboard
+      this.fakeRedirect();
     } else {
       //show error message
       this.errorMessage();
+      this.form.reset();
     }
   }
 
@@ -36,5 +37,13 @@ export class LoginComponent implements OnInit {
       horizontalPosition: 'center',
       verticalPosition: 'top',
     });
+  }
+
+  fakeRedirect() {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+      //redirect to table detail
+    }, 1500);
   }
 }
