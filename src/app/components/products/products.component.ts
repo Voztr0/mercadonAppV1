@@ -38,4 +38,9 @@ export class ProductsComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
+
+  deleteScrew(index: number) {
+    this._screwService.deleteScrewById(index);
+    this.getScrewsData();
+  }
 }

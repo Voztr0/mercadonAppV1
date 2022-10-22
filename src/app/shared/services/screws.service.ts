@@ -133,4 +133,8 @@ export class ScrewService {
   getScrews() {
     return this.dataList.slice();
   }
+
+  deleteScrewById(index: number) {
+    this.dataList.splice(index, 1);
+  }
 }
