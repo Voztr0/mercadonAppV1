@@ -13,6 +13,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [SpinnerComponent, MenuComponent],
@@ -27,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatTableModule,
   ],
   exports: [
     SpinnerComponent,
@@ -38,6 +40,7 @@ import { MatCardModule } from '@angular/material/card';
     MenuComponent,
     MatIconModule,
     MatCardModule,
+    MatTableModule,
   ],
 })
 export class SharedModule {}
