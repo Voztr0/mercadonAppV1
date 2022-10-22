@@ -1,0 +1,31 @@
+<div class="body">
+  <div class="login">
+    <form [formGroup]="form" (ngSubmit)="logIn()">
+      <img src="./assets/img/mercaLogin.png" style="width: 50%" />
+      <h1>Acceso</h1>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Usuario</mat-label>
+        <input type="text" matInput autocomplete="off" formControlName="user" />
+      </mat-form-field>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input
+          type="password"
+          matInput
+          autocomplete="off"
+          formControlName="password"
+        />
+      </mat-form-field>
+      <br />
+      <button
+        [disabled]="form.invalid"
+        class="ancho button"
+        type="submit"
+        mat-raised-button
+        color="primary"
+      >
+        Ingresar
+      </button>
+    </form>
+  </div>
+</div>
