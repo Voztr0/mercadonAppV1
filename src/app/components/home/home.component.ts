@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ScrewService } from 'src/app/shared/services/screws.service';
 import { StorageService } from 'src/app/shared/services/storage.service';
 
 @Component({
@@ -8,7 +9,15 @@ import { StorageService } from 'src/app/shared/services/storage.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private router: Router, private storageService: StorageService) {}
+  public screwList: Array<any>;
+
+  constructor(
+    private router: Router,
+    private storageService: StorageService,
+    private screw: ScrewService
+  ) {
+    this.screwList = this.screw.getScrews();
+  }
 
   ngOnInit(): void {}
 

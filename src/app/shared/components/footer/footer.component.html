@@ -11,7 +11,7 @@
     <button
       class="apply"
       (click)="addProduct()"
-      *ngIf="isLogged()"
+      *ngIf="isLogged() && buttonAdd"
       mat-raised-button
     >
       Añadir producto

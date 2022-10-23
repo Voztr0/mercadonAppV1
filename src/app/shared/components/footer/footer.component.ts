@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
@@ -12,6 +12,7 @@ import { StorageService } from '../../services/storage.service';
 })
 export class FooterComponent implements OnInit {
   @Output() newlist = new EventEmitter();
+  @Input() buttonAdd: any;
 
   constructor(
     private storageService: StorageService,
