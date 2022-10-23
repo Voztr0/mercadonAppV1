@@ -50,7 +50,7 @@ export class ProductsComponent implements OnInit {
     dialogRef.afterClosed().subscribe((res) => {
       if (res) {
         this._screwService.deleteScrewById(index);
-        this.getScrewsData();
+        this.refreshView();
       }
     });
   }

@@ -5,7 +5,7 @@ import { Screws } from '../interfaces/screws';
   providedIn: 'root',
 })
 export class ScrewService {
-  dataList: Screws[] = [
+  private dataList: Screws[] = [
     {
       nombre: 'Jocelin',
       precio: 'Lenglet',
