@@ -1,0 +1,12 @@
+<footer>
+  <mat-toolbar class="toolbarClass">
+    <span>
+      Copyright &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+    </span>
+    <span class="example-spacer"></span>
+    <button *ngIf="isLogged()" mat-button>añadir producto</button>
+  </mat-toolbar>
+</footer>
