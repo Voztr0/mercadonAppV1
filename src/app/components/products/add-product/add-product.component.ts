@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Router } from '@angular/router';
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatSelect } from '@angular/material/select';
 import { Screws } from 'src/app/shared/interfaces/screws';
 import { ScrewService } from 'src/app/shared/services/screws.service';
 
@@ -12,13 +12,11 @@ import { ScrewService } from 'src/app/shared/services/screws.service';
 })
 export class AddProductComponent implements OnInit {
   public form: FormGroup;
-  public formato: any[] = ['formato 1', 'formato 2', 'formato 3'];
+  public formato: any[];
   constructor(
     private fb: FormBuilder,
-    private router: Router,
     private screwService: ScrewService,
-    public dialogRef: MatDialogRef<AddProductComponent>,
-    @Inject(MAT_DIALOG_DATA) public message: string
+    public dialogRef: MatDialogRef<AddProductComponent>
   ) {
     this.form = this.fb.group({
       nombre: ['', Validators.required],
@@ -26,6 +24,7 @@ export class AddProductComponent implements OnInit {
       formato: ['', Validators.required],
       marca: ['', Validators.required],
     });
+    this.formato = ['formato 1', 'formato 2', 'formato 3'];
   }
 
   ngOnInit(): void {}
