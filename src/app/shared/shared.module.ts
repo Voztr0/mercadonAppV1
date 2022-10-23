@@ -22,6 +22,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatDialogModule,
     DragDropModule,
     MatGridListModule,
+    MatSelectModule,
   ],
   exports: [
     SpinnerComponent,
@@ -67,6 +69,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     DragDropModule,
     FooterComponent,
     MatGridListModule,
+    MatSelectModule,
   ],
 })
 export class SharedModule {}

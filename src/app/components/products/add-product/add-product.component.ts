@@ -12,7 +12,7 @@ import { ScrewService } from 'src/app/shared/services/screws.service';
 })
 export class AddProductComponent implements OnInit {
   public form: FormGroup;
-  price = 0;
+  public formato: any[] = ['formato 1', 'formato 2', 'formato 3'];
   constructor(
     private fb: FormBuilder,
     private router: Router,

@@ -19,8 +19,12 @@
     </mat-grid-tile>
     <mat-grid-tile [colspan]="1" [rowspan]="1">
       <mat-form-field class="ancho" appearance="fill">
-        <mat-label>Formato</mat-label>
-        <input matInput autocomplete="off" formControlName="formato" />
+        <mat-label>Selecciona una opción</mat-label>
+        <mat-select formControlName="formato">
+          <mat-option *ngFor="let element of formato" [value]="element">{{
+            element
+          }}</mat-option>
+        </mat-select>
       </mat-form-field>
     </mat-grid-tile>
   </mat-grid-list>
