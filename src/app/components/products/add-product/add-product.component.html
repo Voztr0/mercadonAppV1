@@ -1,0 +1,50 @@
+<div mat-dialog-content>
+  <h2>Nuevo producto</h2>
+</div>
+<form [formGroup]="form">
+  <mat-grid-list cols="2" rowHeight="70px">
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput autocomplete="off" formControlName="nombre" />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="2" rowHeight="70px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Precio</mat-label>
+        <input matInput autocomplete="off" formControlName="precio" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Formato</mat-label>
+        <input matInput autocomplete="off" formControlName="formato" />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="2" rowHeight="70px">
+    <mat-grid-tile [colspan]="2" [rowspan]="1">
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Marca</mat-label>
+        <input matInput autocomplete="off" formControlName="marca" />
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div mat-dialog-actions>
+    <button mat-raised-button [mat-dialog-close]="false">Cancelar</button>
+    <span class="example-spacer"></span>
+    <button
+      (click)="addProduct()"
+      type="submit"
+      mat-raised-button
+      class="apply"
+      [disabled]="form.invalid"
+      [mat-dialog-close]="form"
+    >
+      Guardar
+    </button>
+  </div>
+</form>

@@ -65,4 +65,7 @@ export class ProductsComponent implements OnInit {
       }
     });
   }
+  refreshView() {
+    this.ngOnInit();
+  }
 }

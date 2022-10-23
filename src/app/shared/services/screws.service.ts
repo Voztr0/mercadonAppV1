@@ -137,4 +137,8 @@ export class ScrewService {
   deleteScrewById(index: number) {
     this.dataList.splice(index, 1);
   }
+
+  addScrew(value: Screws) {
+    this.dataList.unshift(value);
+  }
 }
