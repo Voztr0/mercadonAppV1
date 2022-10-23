@@ -66,6 +66,7 @@ export class ProductsComponent implements OnInit {
     });
   }
   refreshView() {
-    this.ngOnInit();
+    this.getScrewsData();
+    this.ngAfterViewInit();
   }
 }
