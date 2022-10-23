@@ -17,9 +17,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent } from './components/dialog/dialog.component';
 @NgModule({
-  declarations: [SpinnerComponent, MenuComponent],
+  declarations: [SpinnerComponent, MenuComponent, DialogComponent],
   imports: [
     CommonModule,
     MatProgressSpinnerModule,
@@ -35,6 +36,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatTooltipModule,
     MatSortModule,
     MatPaginatorModule,
+    MatDialogModule,
   ],
   exports: [
     SpinnerComponent,
@@ -50,6 +52,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatTooltipModule,
     MatSortModule,
     MatPaginatorModule,
+    MatDialogModule,
   ],
 })
 export class SharedModule {}

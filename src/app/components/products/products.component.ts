@@ -4,6 +4,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ScrewService } from 'src/app/shared/services/screws.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component';
 
 @Component({
   selector: 'app-products',
@@ -25,7 +27,7 @@ export class ProductsComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private _screwService: ScrewService) {}
+  constructor(private _screwService: ScrewService, public dialog: MatDialog) {}
   ngOnInit(): void {
     this.getScrewsData();
   }
@@ -40,7 +42,15 @@ export class ProductsComponent implements OnInit {
   }
 
   deleteScrew(index: number) {
-    this._screwService.deleteScrewById(index);
-    this.getScrewsData();
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '460px',
+      data: 'are you sure?',
+    });
+    dialogRef.afterClosed().subscribe((res) => {
+      if (res) {
+        this._screwService.deleteScrewById(index);
+        this.getScrewsData();
+      }
+    });
   }
 }
