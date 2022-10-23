@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <div class="container">
   <div class="button-settings">
-    <mat-icon> settings</mat-icon>
+    <mat-icon (click)="dialogSettings()"> settings</mat-icon>
   </div>
   <div
     *ngIf="screwList && screwList.length > 0; else noData"

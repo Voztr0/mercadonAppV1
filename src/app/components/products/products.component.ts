@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ScrewService } from 'src/app/shared/services/screws.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component';
+import { ConfigureTableComponent } from './configure-table/configure-table.component';
 
 @Component({
   selector: 'app-products',
@@ -50,6 +51,17 @@ export class ProductsComponent implements OnInit {
       if (res) {
         this._screwService.deleteScrewById(index);
         this.getScrewsData();
+      }
+    });
+  }
+
+  dialogSettings() {
+    const dialogRef = this.dialog.open(ConfigureTableComponent, {
+      width: '680px',
+    });
+    dialogRef.afterClosed().subscribe((res) => {
+      if (res) {
+        this.displayedColumns = res.concat('acciones');
       }
     });
   }

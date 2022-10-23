@@ -21,9 +21,15 @@ body {
   color: white;
   padding: 4px;
 }
-
+.apply {
+  background-color: $primary-corporate;
+  color: white;
+}
 .mat-icon {
   cursor: pointer;
+}
+.mat-dialog-actions {
+  justify-content: right;
 }
 
 $background-corporate: #f5f5f5;

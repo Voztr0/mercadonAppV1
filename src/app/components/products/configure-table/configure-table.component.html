@@ -1,0 +1,35 @@
+<mat-dialog-content class="mat-typography">
+  <div cdkDropListGroup>
+    <span>Reordenar, fijar u ocultar las columnas de la tabla</span>
+    <h2>Configurar columnas</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="displayedColumns"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div>
+        <div
+          class="example-box"
+          *ngFor="let item of displayedColumns; let i = index"
+          cdkDrag
+        >
+          <div class="">{{ i + 1 }} {{ item }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+
+<div mat-dialog-actions>
+  <button mat-raised-button [mat-dialog-close]="false">Cancelar</button>
+  <button
+    class="apply"
+    mat-raised-button
+    [mat-dialog-close]="displayedColumns"
+    color="green"
+  >
+    Aplicar
+  </button>
+</div>

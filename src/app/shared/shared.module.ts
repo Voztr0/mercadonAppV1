@@ -19,6 +19,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
 @NgModule({
   declarations: [SpinnerComponent, MenuComponent, DialogComponent],
   imports: [
@@ -37,6 +39,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     MatSortModule,
     MatPaginatorModule,
     MatDialogModule,
+    DragDropModule,
   ],
   exports: [
     SpinnerComponent,
@@ -53,6 +56,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     MatSortModule,
     MatPaginatorModule,
     MatDialogModule,
+    DragDropModule,
   ],
 })
 export class SharedModule {}

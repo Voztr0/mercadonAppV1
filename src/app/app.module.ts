@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SharedModule } from './shared/shared.module';
 import { ProductsComponent } from './components/products/products.component';
 import { HomeComponent } from './components/home/home.component';
+import { ConfigureTableComponent } from './components/products/configure-table/configure-table.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     ProductsComponent,
     HomeComponent,
+    ConfigureTableComponent,
   ],
   imports: [
     SharedModule,
